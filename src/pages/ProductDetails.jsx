@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 // Redux-toolkit
 import { useDispatch, useSelector } from "react-redux";
 import { getSingleProduct } from "../redux/productSlice";
+import { addToCart } from "../redux/cartSlice";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -28,7 +29,7 @@ const ProductDetails = () => {
 
   useEffect(() => {
     dispatch(getSingleProduct(productID));
-  }, [dispatch,productID]);
+  }, [dispatch, productID]);
 
   return (
     <section className="productDetails">
@@ -66,7 +67,7 @@ const ProductDetails = () => {
               >
                 {product.images?.map((url) => (
                   <SwiperSlide>
-                    <img src={url} alt="img"/>
+                    <img src={url} alt="img" />
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -75,7 +76,12 @@ const ProductDetails = () => {
               <h2 className="title">{product.title}</h2>
               <div className="box">
                 <p className="price">{product.price}$</p>
-                <button className="btn">Add To Cart</button>
+                <button
+                  className="btn"
+                  onClick={() => dispatch(addToCart(product))}
+                >
+                  Add To Cart
+                </button>
               </div>
               <h3>Brand</h3>
               <p className="brand">{product.brand}</p>

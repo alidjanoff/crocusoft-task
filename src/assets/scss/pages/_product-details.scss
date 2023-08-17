@@ -82,3 +82,48 @@
     }
   }
 }
+
+@media (max-width: 928px) {
+  .productDetails {
+    height: auto;
+    .container {
+      .row {
+        .product {
+          justify-content: flex-start;
+          flex-direction: column;
+          align-items: flex-start;
+          .productImg {
+            width: 100%;
+            .mySwiper2 {
+              height: auto;
+            }
+            .mySwiper {
+              width: 100%;
+              .swiper-wrapper {
+                .swiper-slide {
+                  width: auto;
+                  height: auto;
+                  margin-top: 0;
+                }
+              }
+            }
+          }
+          .info {
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            .title {
+              text-align: center;
+            }
+            .box {
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              gap: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

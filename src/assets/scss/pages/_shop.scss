@@ -46,3 +46,44 @@
     }
   }
 }
+
+@media (max-width: 928px) {
+  .shop {
+    .container {
+      .row {
+        .filter {
+          flex-wrap: wrap;
+          justify-content: center;
+          .btn {
+            width: 150px;
+            font-size: 14px;
+          }
+        }
+        .productBox {
+          .productCard {
+            width: 48%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .shop {
+    .container {
+      .row {
+        .filter {
+          .btn {
+            width: 100%;
+          }
+        }
+        .productBox {
+          .productCard {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
