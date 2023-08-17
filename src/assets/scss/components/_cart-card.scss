@@ -1,0 +1,88 @@
+.cartCard {
+  width: 100%;
+  border-bottom: 2px solid #000;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    display: flex;
+    align-items: center;
+    color: #000;
+    .cartImg {
+      width: 30%;
+      img {
+        width: 100%;
+        object-fit: contain;
+        border-top-left-radius: 10px;
+      }
+    }
+    .cartInfo {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      padding: 0 15px;
+      .title {
+        font-size: 18px;
+      }
+      .price {
+        font-size: 18px;
+        font-weight: 500;
+        color: #0000ff;
+      }
+    }
+  }
+  .quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 25px;
+    button {
+      padding: 5px 10px;
+      cursor: pointer;
+      border: 0;
+      outline: 0;
+      color: #fff;
+      font-weight: 700;
+      transition: 0.3s ease;
+      &.min {
+        background-color: red;
+        &.disabled {
+          background-color: gray;
+          cursor: not-allowed;
+          &:active {
+            transform: scale(1);
+          }
+        }
+      }
+      &.max {
+        background-color: green;
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+    span {
+      width: 20px;
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+  .remove {
+    padding: 0 15px;
+    svg {
+      cursor: pointer;
+      &:hover {
+        path {
+          color: red;
+          transform: scale(1.1);
+        }
+      }
+      path {
+        color: #000;
+        transition: 0.3s ease;
+      }
+    }
+  }
+}

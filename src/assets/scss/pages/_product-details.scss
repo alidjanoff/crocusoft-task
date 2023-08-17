@@ -1,0 +1,84 @@
+@import "../mixin";
+
+.productDetails {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #673ab7, #512da8);
+  .container {
+    .row {
+      .product {
+        width: 100%;
+        padding: 80px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .productImg {
+          width: 50%;
+          .mySwiper2 {
+            width: 100%;
+            height: 500px;
+            .swiper-wrapper {
+              .swiper-slide {
+                width: 100%;
+                height: 100%;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                }
+              }
+            }
+          }
+          .mySwiper {
+            width: 100%;
+            .swiper-wrapper {
+              .swiper-slide {
+                width: 100px;
+                height: 100px;
+                margin-top: 50px;
+                img {
+                  width: 100%;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+        }
+        .info {
+          width: 40%;
+          height: 100%;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 25px;
+          .title {
+            color: #fff;
+            font-size: 30px;
+          }
+          .box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .price {
+              font-size: 18px;
+              font-weight: 600;
+              color: #00ff00;
+            }
+            .btn {
+              @include secondaryBtn(#fff, purple, green);
+              width: 300px;
+            }
+          }
+          h3 {
+            color: #fff;
+            font-size: 20px;
+          }
+          p {
+            color: #ffffff80;
+          }
+        }
+      }
+    }
+  }
+}

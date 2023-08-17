@@ -1,0 +1,14 @@
+//* Global styles
+@import "./base";
+
+//* Components
+@import "./components/header";
+@import "./components/cart";
+@import "./components/product_card";
+@import "./components/cart-card";
+
+//* Pages
+@import "./pages/home";
+@import "./pages/shop";
+@import "./pages/product-details";
+@import "./pages/not-found";

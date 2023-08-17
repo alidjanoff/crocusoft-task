@@ -1,0 +1,37 @@
+@mixin primaryBtn($clr, $bgClr, $hvrClr) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: $clr;
+  background-color: $bgClr;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $hvrClr;
+    transform: scale(1.1);
+  }
+}
+
+@mixin secondaryBtn($clr, $bgClr, $hvrClr) {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: $bgClr;
+  color: $clr;
+  text-align: center;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: .3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: $hvrClr;
+  }
+}
